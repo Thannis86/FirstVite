@@ -1,9 +1,8 @@
-export function setupCounter(element) {
-  let counter = 0
-  const setCounter = (count) => {
-    counter = count
-    element.innerHTML = `count is ${counter}`
-  }
-  element.addEventListener('click', () => setCounter(counter + 1))
-  setCounter(0)
-}
+let counter = 0;
+const button = document.querySelector("#counter");
+
+button.addEventListener("click", function () {
+  counter++;
+  console.log(counter);
+  button.textContent = `Counter:${counter}`;
+});
